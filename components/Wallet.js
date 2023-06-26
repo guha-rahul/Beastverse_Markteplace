@@ -34,7 +34,14 @@ const Wallet = () => {
     <div>
       <WagmiConfig client={client}>
         <RainbowKitProvider chains={chains}>
-          <ConnectButton />
+        <ConnectButton
+        className="broder-2 border-blue-600 text-blue-600 p-2"
+  accountStatus={{
+    smallScreen: 'avatar',
+    largeScreen: 'full',
+  }}
+/>
+         
         </RainbowKitProvider>
       </WagmiConfig>
     </div>
