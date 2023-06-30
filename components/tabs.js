@@ -1,19 +1,30 @@
 "use client"
 import React,{useState} from 'react'
 
-const tabs = () => {
-    const[activeTab,setActiveTab]=useState('items');
-    const selected="text-blue-500";
-    const notSelected="text-gray-300";
+const Tabs = () => {
+  const [activeTab, setActiveTab] = useState("tab1");
+  const [tab1, setTab1] = useState(true);
+  const [tab2, setTab2] = useState(false);
+  const toggle = (tab) => {
+    if (activeTab !== tab) {
+      setActiveTab(tab);
+      if (tab === "tab1") {
+        console.log("tab1 clicked");
+        setTab1(true);
+        setTab2(false);
+      } else {
+        console.log("tab2 clicked");
+        setTab1(false);
+        setTab2(true);
+      }
+    }
+  }
   return (
-    <div className=' '>
-      <div className='flex flex-row items-center gap-5 bg-gray-900 text-white w-full py-4'>
-      <button className={`text-xl font-bold ${activeTab==='items'?selected:notSelected}`} onClick={()=>setActiveTab('items')}>Items</button>
-        <button className={`text-xl font-bold ${activeTab==='activity'?selected:notSelected}`} onClick={()=>setActiveTab('activity')}>Activity</button>
-      </div>
-      
+    <div className='flex flex-row gap-5'>
+      <button className={tab1 ? "bg-gray-100 text-gray-900 px-3 py-2 rounded-t-md font-medium" : "bg-gray-900 text-gray-100 px-3 py-2 rounded-t-md font-medium"} onClick={() => toggle("tab1")}>Tab 1</button>
+      <button className={tab2 ? "bg-gray-100 text-gray-900 px-3 py-2 rounded-t-md font-medium" : "bg-gray-900 text-gray-100 px-3 py-2 rounded-t-md font-medium"} onClick={() => toggle("tab2")}>Tab 2</button>
     </div>
   )
 }
 
-export default tabs
+export default Tabs
