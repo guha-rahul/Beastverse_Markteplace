@@ -2,7 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Wallet from "@/components/Wallet";
 import Navbar from "@/components/Navbar";
-const inter = Inter({ subsets: ["latin"] });
+import Landing from "@/components/Landing";
+
 
 export const metadata = {
   title: "Nft_marketplace",
@@ -12,10 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <div >
         <Navbar />
         {children}
-      </body>
+       <Landing/>
+       
+      </div>
+     
     </html>
   );
 }
