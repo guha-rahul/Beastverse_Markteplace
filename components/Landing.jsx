@@ -27,7 +27,7 @@ const Landing = () => {
     </div>
     <div></div>
     <div className='flex flex-col gap-1 mb-5'>
-    <h1 className="font-extrabold text-[1.6rem] lg:text-[2rem] decoration-4 text-white p-2">Beast Verse MarketPlace</h1>
+    <h1 className="font-extrabold text-[1.6rem] lg:text-[2.2rem] decoration-4 text-white p-2">Beast Verse MarketPlace</h1>
     <div className="text-gray-200 w-[85%] lg:w-[55%] text-[1rem] lg:text-[1.2rem] p-2">Beast Verse is a Play-to-earn PvP NFT game, built on the Polygon Blockchain. We are creating a virtual world where players can explore different terrains, choose their favorite beasts, and fight to victory. Our use of the Polygon Blockchain ensures that the game is secure and transparent, which is essential for players who value their personal information and assets. So, jump into your favorite terrain, choose your favorite beasts, and
      fight your way through to become the Mightiest of All Masters!</div>
     </div>

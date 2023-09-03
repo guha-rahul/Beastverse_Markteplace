@@ -1,19 +1,12 @@
-import Landing from "@/components/Landing";
-import Tabs from "@/components/tabs";
-import CardNft from "@/components/cardNft";
-import world from "@/public/assets/world.png";
-import logo from "@/public/assets/BVlogo.png";
+import Image from 'next/image'
+import Items from '@/components/Items'
+import Landing from '@/components/Landing'
 export default function Home() {
   return (
-    <main className="relative">
-      <Landing />
-      <div className="bg-gray-950 pl-12 flex flex-wrap gap-2 pt-5 pb-5">
-      
-      <CardNft img={world} type="legendary" price="12"/>
-      <CardNft img={world} type="legendary" price="12"/>
-      </div>
-      
-     
+    <main className="bg-gray-950 pl-12 flex flex-col justify-start items-start gap-2  pb-5">
+
+    <Items/>
+
     </main>
-  );
+  )
 }
